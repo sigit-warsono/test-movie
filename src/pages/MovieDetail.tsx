@@ -51,7 +51,7 @@ const MovieDetail: React.FC = () => {
                             className="font-semibold text-blue-100"
                             data-testid={`director-${slugify(director.name)}`}
                         >
-                            Director: <p className={"font-extralight"}>{director.name}</p>
+                            Director: <span className={"font-extralight"}>{director.name}</span>
                         </p>
                     )}
                     <div className={"flex flex-col gap-2"}>

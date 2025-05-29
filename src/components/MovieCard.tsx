@@ -1,6 +1,5 @@
 import type { Movie } from "../types/Movie";
 import { Link } from "react-router-dom";
-// import {render} from "@testing-library/react";
 import { MdOutlineImageNotSupported } from "react-icons/md";
 
 function truncateText(text: string, maxLength: number ) {
@@ -10,9 +9,7 @@ function truncateText(text: string, maxLength: number ) {
     return text.slice(0, maxLength) + '...';
 }
 
-const MovieCard = ({ movie }: { movie: Movie }) => {
-    console.log(movie.poster_path)
-    return (
+const MovieCard = ({ movie }: { movie: Movie })=> (
         <div className="rounded overflow-hidden shadow-lg" data-testid="movie-card">
             <Link to={`/movie/${movie.id}`} data-testid="movie-link">
 
@@ -38,8 +35,6 @@ const MovieCard = ({ movie }: { movie: Movie }) => {
                 </div>
             </Link>
         </div>
-    )
-
-};
+    );
 
 export default MovieCard;
